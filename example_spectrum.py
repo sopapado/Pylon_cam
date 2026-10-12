@@ -1,4 +1,7 @@
-"""Run with 32-bit Python after installing the PICam SDK and connecting the camera."""
+# Configure and acquire a spectrum from a Princeton Instruments Pylon camera.
+# Used in Prof. Stéphane Berciaud's group at IPCMS, CNRS.
+# Check the installation instructions before running this code:
+# https://github.com/sopapado/Pylon_cam#readme
 import sys
 
 sys.path.insert(0, r"C:\path\to\Pylon_cam")  # Set your repository folder here
