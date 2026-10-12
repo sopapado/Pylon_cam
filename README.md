@@ -53,7 +53,14 @@ py -3.7-32 -m pip install -r requirements.txt
 
 ## 2. Configuration and acquisition
 
+Replace `C:\path\to\Pylon_cam` with the folder where you downloaded this
+repository (the folder containing `Pylon_init.py`). This lets you use the
+code from another script or notebook without changing its working folder.
+
 ```python
+import sys
+
+sys.path.insert(0, r"C:\path\to\Pylon_cam")  # Set your repository folder here
 import Pylon_init as pyl
 
 pyl.set_spectrum(exp_time=100, y_start=0, y_height=100, bin=True)
