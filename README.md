@@ -3,11 +3,8 @@
 This Pylon setup is used in the group of **Prof. Stéphane Berciaud at IPCMS, CNRS**.
 
 The original Pylon scripts and APIs were developed by **Dr Michelangelo Romeo,
-CNRS Engineer at IPCMS, Strasbourg**, and **Dr Joanna Wolff (RIKEN)**.
-The original driver modules also credit **Daniel R. Dietze**.
-
-This first step uses the original driver files directly. There is no Python
-package to install and no `simplepicam` API.
+CNRS Engineer at IPCMS, Strasbourg**, and **Dr Joanna Wolff (RIKEN, Japan)**.
+Credit goes also to **Daniel R. Dietze**.
 
 ## 1. Prepare the camera computer
 
