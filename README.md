@@ -23,17 +23,14 @@ In this folder, install NumPy using your 32-bit Python:
 py -3.7-32 -m pip install -r requirements.txt
 ```
 
-## 2. Configure and acquire
+## 2. Configuration and acquisition
 
 ```python
 import Pylon_init as pyl
 
-try:
-    pyl.set_spectrum(exp_time=100, y_start=0, y_height=100, bin=True)
-    spectrum = pyl.get_spectrum().reshape(-1)
-    print(spectrum)  # 1340 detector samples
-finally:
-    pyl.close()
+pyl.set_spectrum(exp_time=100, y_start=0, y_height=100, bin=True)
+spectrum = pyl.get_spectrum().reshape(-1)
+pyl.close()
 ```
 
 Run the supplied example from this folder:
