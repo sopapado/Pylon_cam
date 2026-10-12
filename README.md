@@ -60,6 +60,10 @@ repository (the folder containing `Pylon_init.py`). This lets you use the
 code from another script or notebook without changing its working folder.
 
 ```python
+# Configure and acquire a spectrum from a Princeton Instruments Pylon camera.
+# Used in Prof. Stéphane Berciaud's group at IPCMS, CNRS.
+# Check the installation instructions before running this code:
+# https://github.com/sopapado/Pylon_cam#readme
 import sys
 
 sys.path.insert(0, r"C:\path\to\Pylon_cam")  # Set your repository folder here
