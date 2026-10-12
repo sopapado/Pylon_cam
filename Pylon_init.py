@@ -1,6 +1,6 @@
 """Minimal setup based on the original Pylon_init.py.
 
-Original Pylon scripts: Michelangelo Romeo (IPCMS/CNRS) and
+Original Pylon scripts: Dr Michelangelo Romeo, CNRS Engineer at IPCMS, Strasbourg, and
 Dr Joanna Wolff (RIKEN). Original Pylon_init update: 20 September 2022.
 The driver modules retain their original author and upstream credits.
 

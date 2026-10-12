@@ -1,7 +1,7 @@
 # Attribution
 
-The original Pylon scripts and APIs are by Michelangelo Romeo, engineer at
-IPCMS/CNRS, and Dr Joanna Wolff (RIKEN), as identified by the project owner.
+The original Pylon scripts and APIs are by Dr Michelangelo Romeo, CNRS Engineer
+at IPCMS, Strasbourg, and Dr Joanna Wolff (RIKEN), as identified by the project owner.
 The supplied Pylon_init.py identifies an update by Joanna Wolff on
 20 September 2022. The two original driver modules retain their author,
 copyright, and GPL notices and credit Daniel R. Dietze's underlying work.

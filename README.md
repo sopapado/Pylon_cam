@@ -1,7 +1,7 @@
 # Pylon — minimal camera example
 
-The original Pylon scripts and APIs were developed by **Michelangelo Romeo,
-engineer at IPCMS/CNRS**, and **Dr Joanna Wolff (RIKEN)**.
+The original Pylon scripts and APIs were developed by **Dr Michelangelo Romeo,
+CNRS Engineer at IPCMS, Strasbourg**, and **Dr Joanna Wolff (RIKEN)**.
 The original driver modules also credit **Daniel R. Dietze**.
 
 This first step uses the original driver files directly. There is no Python
@@ -39,6 +39,10 @@ get the drivers from the official [PICam SDK & Driver page](https://www.teledyne
 Check that `DLL_32_bit_path` in `Pylon_init.py` points to your installed
 `Picam32.dll`. Close LightField before running the Python script.
 
+Install the camera drivers appropriate for your Windows version (64-bit
+drivers on 64-bit Windows). The **32-bit requirement applies to Python and
+the DLL it loads (`Picam32.dll`)**, not to the Windows camera drivers.
+
 ### Install NumPy
 
 In this folder, install NumPy using your 32-bit Python:
@@ -73,6 +77,15 @@ Always close when finished; restart the script for a new connection.
 one-dimensional array of 1340 samples, excluding the four padding samples.
 This first step keeps the original detector width of 1340; general support
 for other detectors can be added later.
+
+> **Warning — no wavelength information:** This code returns detector
+> intensities by pixel only, without a wavelength axis. Use LightField to
+> configure the spectrometer and acquire a reference spectrum, saving its
+> wavelength axis for the same grating, central wavelength, and detector
+> configuration used here. Alternatively, use a calibration lamp with known
+> spectral lines to calibrate pixel positions to wavelengths. Update the
+> wavelength reference whenever those settings change. Close LightField
+> before acquiring with Python.
 
 ## Files
 
