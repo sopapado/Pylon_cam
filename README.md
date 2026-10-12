@@ -27,7 +27,7 @@ The output should show **3.7.9** and **32 bit**. If `py` is not recognized,
 rerun the installer using Modify and enable the Python launcher, then open
 a new PowerShell window.
 
-Python 3.7 is no longer supported however this version matches the existing camera code. Fork this project to adapt it to newer pythons. 
+Python 3.7 is no longer supported however this version matches the existing camera code. Fork this project to adapt it to newer Python versions. 
 
 ### Camera drivers and DLLs
 
@@ -35,12 +35,12 @@ If you have installed **LightField supplied by Princeton Instruments**, the
 PICam DLL files should already be installed. If you do not have LightField,
 get the drivers from the official [PICam SDK & Driver page](https://www.teledynevisionsolutions.com/en-gb/products/picam-sdk-amp-driver/?model=PICAM64).
 
-Check that `DLL_32_bit_path` in `Pylon_init.py` points to your installed
+!Check! that `DLL_32_bit_path` in `Pylon_init.py` points to your installed
 `Picam32.dll`. Close LightField before running the Python script.
 
 Install the camera drivers appropriate for your Windows version (64-bit
 drivers on 64-bit Windows). The **32-bit requirement applies to Python and
-the DLL it loads (`Picam32.dll`)**, not to the Windows camera drivers.
+the DLL it loads (`Picam32.dll`)**, NOT to the Windows camera drivers.
 
 ### Install NumPy
 
@@ -91,11 +91,11 @@ for other detectors can be added later.
 > **Warning - no wavelength information:** This code returns detector
 > intensities by pixel only, without a wavelength axis. Use LightField to
 > configure the spectrometer and acquire a reference spectrum, saving its
-> wavelength axis for the same grating, central wavelength, and detector
+> wavelength axis for the same grating, central wavelength and detector
 > configuration used here. Alternatively, use a calibration lamp with known
 > spectral lines to calibrate pixel positions to wavelengths. Update the
 > wavelength reference whenever those settings change. Close LightField
-> before acquiring with Python.
+> before acquiring with Python. 
 
 ## Files
 
@@ -109,19 +109,3 @@ example_spectrum.py       The example above
 requirements.txt         NumPy dependency
 ```
 
-The module imports use this folder, with no network-drive paths or directory
-changes. Plotting, saving files, HyperMap, and package publication are left
-for later steps.
-
-Small corrections to the original driver: SDK failures raise errors;
-rejected configuration and failed acquisition cannot return a spectrum;
-the native `pibln` type is a 32-bit integer, as required by PICam. The original
-framed buffer conversion remains in place.
-
-The previous package is saved locally under `archive/previous-simplepicam/`.
-Unchanged supplied originals remain under `reference/`. Both directories are
-ignored by Git. Nothing has been pushed automatically.
-
-This minimal path has been checked without hardware; acquisition on the
-physical camera still needs testing. See [NOTICE.md](NOTICE.md) for the
-original licensing notes.
