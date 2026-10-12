@@ -1,5 +1,10 @@
 # simplepicam
 
+The original Pylon scripts and APIs were developed by **Michelangelo Romeo,
+engineer at IPCMS/CNRS**, and **Dr Joanna Wolff (RIKEN)**.
+This package builds on their work. The underlying driver also credits
+Daniel R. Dietze; see [NOTICE.md](NOTICE.md) for the retained attribution.
+
 A small Python interface for acquiring spectra with Princeton Instruments
 PICam cameras. Adapted from the working Pylon laboratory scripts.
 
@@ -152,6 +157,32 @@ without hiding an exception already in progress) and require restarting the
 process. No automatic demo data or silent partial spectra are returned.
 
 ## Development and release
+
+### Project structure and original source files
+
+The name `simplepicam` follows the proposed `from simplepicam import Camera`
+API in the original project request. It names this Python package, not the
+vendor SDK or the original Pylon scripts.
+
+| Package file | Purpose and original source |
+| --- | --- |
+| `src/simplepicam/camera.py` | Simple public `Camera` API; adapts the configuration and spectrum workflow from `Pylon_init.py`. |
+| `src/simplepicam/_driver.py` | Focused adaptation of `picamClass.py`: SDK communication, ROI configuration, commit, synchronous acquisition, and cleanup. Retains the `readNFrames(1, framed=1)` path. |
+| `src/simplepicam/_types.py` | Copied from `picam_types.py`, retaining its definitions and attribution, with the native boolean and byte type corrections described in the inspection notes. |
+| `src/simplepicam/discovery.py` | New code that locates and loads the installed SDK DLL. |
+| `src/simplepicam/errors.py` | New exception classes for reporting failures. |
+| `src/simplepicam/__init__.py` | Exports `Camera` and the exceptions for convenient imports. |
+
+The original three files remain unchanged in the local ignored `reference/`
+folder. That folder is not uploaded to GitHub or included in releases.
+The package imports the adapted files under `src/simplepicam/`; it does not
+import or execute the old scripts. HyperMap was only a usage reference, and
+`Picam32.dll` must come from the separately installed vendor SDK.
+
+`examples/` contains acquisition scripts, `tests/` contains camera-free tests,
+and `docs/` contains inspection, validation, and release notes.
+
+### Build and test
 
 ```powershell
 python -m pip install -e .

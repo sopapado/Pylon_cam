@@ -1,5 +1,10 @@
 # Attribution and release licensing review
 
+The original Pylon scripts and APIs were developed by Michelangelo Romeo,
+engineer at IPCMS/CNRS, and Dr Joanna Wolff (RIKEN). This attribution was
+provided by the project owner. The upstream driver credits below are
+preserved alongside it.
+
 This package adapts the supplied `Pylon_init.py`, `picamClass.py`, and
 `picam_types.py`. The latter two credit Daniel R. Dietze and identify
 Michelangelo Romeo as author, with "Copyright 2020, The HYRBID Python
