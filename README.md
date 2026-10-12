@@ -1,4 +1,4 @@
-# Pylon — minimal camera example
+# Pylon - minimal camera example
 
 The original Pylon scripts and APIs were developed by **Dr Michelangelo Romeo,
 CNRS Engineer at IPCMS, Strasbourg**, and **Dr Joanna Wolff (RIKEN)**.
@@ -78,7 +78,7 @@ one-dimensional array of 1340 samples, excluding the four padding samples.
 This first step keeps the original detector width of 1340; general support
 for other detectors can be added later.
 
-> **Warning — no wavelength information:** This code returns detector
+> **Warning - no wavelength information:** This code returns detector
 > intensities by pixel only, without a wavelength axis. Use LightField to
 > configure the spectrometer and acquire a reference spectrum, saving its
 > wavelength axis for the same grating, central wavelength, and detector
