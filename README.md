@@ -30,15 +30,16 @@ a new PowerShell window.
 
 Python 3.7 is no longer supported; this version matches the existing camera setup.
 
-### Prepare the SDK and dependencies
+### Camera drivers and DLLs
 
-- Use Windows and **Python 3.7, 32-bit**, matching the original working setup.
-- Install the **Princeton Instruments PICam SDK and camera drivers**. This
-  installation supplies `Picam32.dll`; the DLL is not included in this repository.
-- Connect and power on the camera. Close any other software using it.
-- Open `Pylon_init.py` and check the **`DLL_32_bit_path`** line. It already
-  contains the path from the original working script. Change it only if your
-  installed DLL is somewhere else.
+If you have installed **LightField supplied by Princeton Instruments**, the
+PICam DLL files should already be installed. If you do not have LightField,
+get the drivers from the official [PICam SDK & Driver page](https://www.teledynevisionsolutions.com/en-gb/products/picam-sdk-amp-driver/?model=PICAM64).
+
+Check that `DLL_32_bit_path` in `Pylon_init.py` points to your installed
+`Picam32.dll`. Close LightField before running the Python script.
+
+### Install NumPy
 
 In this folder, install NumPy using your 32-bit Python:
 
