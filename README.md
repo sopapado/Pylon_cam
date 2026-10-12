@@ -27,7 +27,7 @@ The output should show **3.7.9** and **32 bit**. If `py` is not recognized,
 rerun the installer using Modify and enable the Python launcher, then open
 a new PowerShell window.
 
-Python 3.7 is no longer supported; this version matches the existing camera setup.
+Python 3.7 is no longer supported however this version matches the existing camera code. Fork this project to adapt it to newer pythons. 
 
 ### Camera drivers and DLLs
 
