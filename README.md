@@ -9,6 +9,29 @@ package to install and no `simplepicam` API.
 
 ## 1. Prepare the camera computer
 
+### Install Python 3.7, 32-bit
+
+1. Download the official [Python 3.7.9 Windows 32-bit installer](https://www.python.org/ftp/python/3.7.9/python-3.7.9.exe).
+   On the [release page](https://www.python.org/downloads/release/python-379/),
+   this is called **Windows x86 executable installer**. Choose **x86**, not x86-64.
+2. Run the installer and choose **Install Now**. Keep **pip** and the
+   **Python launcher (`py`)** enabled if using Customize installation.
+   You can keep your other Python installations; the commands below select
+   Python 3.7 32-bit explicitly, so changing PATH is unnecessary.
+3. Open a new PowerShell window and verify:
+
+```powershell
+py -3.7-32 -c "import sys, struct; print(sys.version); print(struct.calcsize('P') * 8, 'bit')"
+```
+
+The output should show **3.7.9** and **32 bit**. If `py` is not recognized,
+rerun the installer using Modify and enable the Python launcher, then open
+a new PowerShell window.
+
+Python 3.7 is no longer supported; this version matches the existing camera setup.
+
+### Prepare the SDK and dependencies
+
 - Use Windows and **Python 3.7, 32-bit**, matching the original working setup.
 - Install the **Princeton Instruments PICam SDK and camera drivers**. This
   installation supplies `Picam32.dll`; the DLL is not included in this repository.
