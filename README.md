@@ -1,5 +1,7 @@
 # Pylon - minimal camera example
 
+This Pylon setup is used in the group of **Prof. Stephane Berciaud at IPCMS, CNRS**.
+
 The original Pylon scripts and APIs were developed by **Dr Michelangelo Romeo,
 CNRS Engineer at IPCMS, Strasbourg**, and **Dr Joanna Wolff (RIKEN)**.
 The original driver modules also credit **Daniel R. Dietze**.
