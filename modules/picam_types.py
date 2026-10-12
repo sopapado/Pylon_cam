@@ -30,9 +30,9 @@ import ctypes
 # to get the value, use XX.value
 piint = ctypes.c_int
 piflt = ctypes.c_double     # !!!! native floating point is actually double; ctypes.c_float
-pibln = ctypes.c_int  # PICam pil_platform.h: native boolean is int, not C++ bool.
+pibln = ctypes.c_int  # PICam native boolean is an int, not a C++ bool.
 pichar = ctypes.c_char
-pibyte = ctypes.c_ubyte
+pibyte = ctypes.c_byte
 pibool = ctypes.c_bool
 pi8s = ctypes.c_int8
 pi8u = ctypes.c_uint8
